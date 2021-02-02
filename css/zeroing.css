@@ -69,4 +69,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   font-weight: 400;
 }
-/*# sourceMappingURL=style.css.map */
+
+.video-bg {
+  display: none;
+}
+/*# sourceMappingURL=zeroing.css.map */
