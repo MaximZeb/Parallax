@@ -1,0 +1,19 @@
+.grid__panters 
+{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+.grid__childOne
+{
+    height: 100%;
+    width: 100%;
+    grid-row: 1;
+    display: grid;
+video 
+{
+    width: 100%;
+}
+}    
+}

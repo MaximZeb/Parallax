@@ -1,0 +1,22 @@
+.grid__panters {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.grid__panters .grid__childOne {
+  height: 100%;
+  width: 100%;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid__panters .grid__childOne video {
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
