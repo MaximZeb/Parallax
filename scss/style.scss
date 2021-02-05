@@ -1,19 +1,56 @@
+@import "./zeroing.scss";
+
 .grid__panters 
 {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-
-.grid__childOne
+    grid-template-rows: 
+    minmax(500px, 500px)
+    minmax(1000, 1fr)
+    minmax(1000, 1fr);
+    grid-template-columns: 1fr;
+.grid__child1, .grid__child2, .grid__child3 
 {
-    height: 100%;
-    width: 100%;
+    grid-column: 1 / -1;
+}
+.grid__child1 
+{
     grid-row: 1;
-    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 1;
+    background-size:cover;
 video 
 {
-    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height:auto;
 }
-}    
 }
+}
+.grid__child2 
+{
+    grid-row:2;
+}
+.grid__child3
+{
+    grid-row:3;
+}
+}
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
