@@ -130,10 +130,57 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.grid__parent .parent__child1 .cloud {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  animation-name: cloudOne;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes cloudOne {
+  0% {
+    top: 0px;
+    left: 60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0px;
+    left: 400px;
+    opacity: 0.6;
+  }
+}
+.grid__parent .parent__child1 .cloud2 {
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+  animation-name: cloudTwo;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes cloudTwo {
+  0% {
+    top: 40px;
+    right: 60px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 40px;
+    right: 300px;
+    opacity: 0;
+  }
+}
 .grid__parent .parent__child2 {
   grid-row: 2;
 }
 .grid__parent .parent__child3 {
+  display: grid;
   height: 100%;
   grid-row: 3;
   background: url(../image/footer.jpg);
@@ -141,4 +188,10 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 780px) {
+  .cloud, .cloud2 {
+    display: none;
+  }
 }

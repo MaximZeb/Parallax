@@ -17,6 +17,38 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
+.cloud 
+{
+	position: absolute;
+	top: 0px;
+	left:0px;
+	opacity: 0;
+	animation-name: cloudOne;
+	animation-duration:2s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+}
+@keyframes cloudOne  
+{
+	0% {top: 0px; left: 60px;opacity: 0}
+	100% {top: 0px; left: 400px;opacity: 0.6}
+}
+.cloud2 
+{
+	position: absolute;
+	top: 0px;
+	opacity: 0;
+	animation-name: cloudTwo;
+	animation-duration:4s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+}
+@keyframes cloudTwo  
+{
+	0% {top: 40px; right: 60px; opacity: 0}
+	50% {opacity:0.7;}
+	100% {top: 40px; right: 300px; opacity: 0.0}
+}
 }
 .parent__child2 
 {
@@ -24,6 +56,7 @@
 }
 .parent__child3 
 {
+	display: grid;
 	height: 100%;
 	grid-row: 3;	
 	background: url(../image/footer.jpg);
@@ -33,4 +66,9 @@
 	background-size: cover;
 }
 }
- 
+ @media only screen and (max-width:780px) {
+	.cloud, .cloud2 
+	{
+		display: none;
+	}
+ }
