@@ -1,2 +1,36 @@
 @import "./zeroing.scss";
 
+.grid__parent
+{
+	display:grid;
+	grid-template-rows: 
+	minmax(1000px, 1fr)
+	minmax(1000px, 1fr)
+	minmax(1000px, 1fr);
+.parent__child1 
+{
+	height: 100%;
+	grid-row: 1;	
+	background: url(../image/Fon1.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.parent__child2 
+{
+	grid-row: 2 ;
+}
+.parent__child3 
+{
+	height: 100%;
+	grid-row: 3;	
+	background: url(../image/footer.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+}
+ 
